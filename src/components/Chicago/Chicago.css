@@ -1,0 +1,153 @@
+/* Chicago.css */
+.chicago-section {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.chicago-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.chicago-text {
+  flex: 1;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.chicago-text h2 {
+  font-size: 3rem;
+  color: #F4CE14;
+  margin: 0;
+  font-family: 'Markazi Text', serif;
+}
+
+.chicago-text h3 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0.5rem 0 1.5rem;
+  font-family: 'Markazi Text', serif;
+}
+
+.chicago-text p {
+  color: #495E57;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.chicago-images {
+  flex: 1;
+  position: relative;
+  height: 500px;
+  animation: fadeInRight 1s ease-out;
+}
+
+.chicago-images img {
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.chicago-images .image-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: auto;
+  z-index: 2;
+}
+
+.chicago-images .image-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: auto;
+  z-index: 1;
+}
+
+.chicago-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive design */
+@media screen and (max-width: 992px) {
+  .chicago-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .chicago-text h3 {
+    font-size: 2rem;
+  }
+
+  .chicago-images {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .chicago-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .chicago-text {
+    margin-bottom: 3rem;
+  }
+
+  .chicago-images {
+    width: 100%;
+    height: 350px;
+  }
+
+  .chicago-images .image-top {
+    top: 0;
+    right: 10%;
+    width: 50%;
+  }
+
+  .chicago-images .image-bottom {
+    bottom: 0;
+    left: 10%;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .chicago-images {
+    height: 300px;
+  }
+
+  .chicago-images .image-top,
+  .chicago-images .image-bottom {
+    width: 70%;
+  }
+}

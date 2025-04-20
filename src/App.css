@@ -1,0 +1,31 @@
+.App {
+  font-family: 'Karla', sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+main {
+  min-height: 70vh;
+}
+
+/* Little Lemon color variables */
+:root {
+  --primary-black: #000000;
+  --primary-green: #495E57;
+  --primary-yellow: #F4CE14;
+  --secondary-salmon: #EE9972;
+  --secondary-peach: #FBDABB;
+  --highlight-light: #EDEFEE;
+  --highlight-dark: #333333;
+}

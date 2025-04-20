@@ -1,0 +1,48 @@
+/* Homepage.css */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Animation for page elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to child components */
+.home-page > * {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.home-page > *:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.home-page > *:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.home-page > *:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.home-page > *:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .home-page {
+    padding: 0;
+  }
+}
